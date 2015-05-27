@@ -36,6 +36,13 @@ module.exports = function (grunt)
                     }
                 }
             },
+            firefox: {
+                options: {
+                    args: {
+                        browser: 'firefox'
+                    }
+                }
+            },
             phantomjs: {
                 options: {
                     args: {
@@ -49,7 +56,7 @@ module.exports = function (grunt)
 
 
     grunt.registerTask('test', [
-        'protractor_webdriver', 'protractor:chrome'
+        'protractor:firefox'
     ]);
 
     grunt.registerTask('test:phantomjs', [
